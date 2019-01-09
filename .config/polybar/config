@@ -1,0 +1,127 @@
+[colors]
+background = #131313
+foreground = #bdbdbd
+accent = #841b36
+
+[bar/MyBar]
+monitor = ${env:MONITOR:eDP-1-1}
+bottom = true
+
+width = 100%
+height = 27
+
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+;- radius-{top,bottom}
+radius = 0.3
+
+;- {overline,underline}-size
+;- {overline,underline}-color
+line-size = 3
+line-color = ${colors.accent}
+
+;- border-{left,top,right,bottom}-size
+;- border-{left,top,right,bottom}-color
+;border-size = 1
+;border-color = ${colors.accent}
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 0
+module-margin-right = 2
+
+;; Fonts
+font-0 = "Hack:size=10;2"
+font-1 = "Hack:style=Bold:size=10;2"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;2"
+font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=10;2"
+font-4 = "Font Awesome 5 Brands:pixelsize=10;2"
+font-5 = "Noto Sans:size=10;2"
+
+;; Modules
+modules-left = i3
+modules-center = date
+modules-right = battery pulseaudio
+
+;separator = | 
+
+;; System Tray
+tray-position = right
+tray-detached = false
+tray-maxsize = 14
+tray-transparent = false
+tray-background = ${colors.background}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 2
+tray-scale = 1.0
+
+
+[module/i3]
+type = internal/i3
+pin-workspaces = false 
+enable-click = true
+enable-scroll = false
+wrapping-scroll = false
+reverse-scroll = false
+;- <label-state> = <label-(focused|unfocused|visible|urgent)>
+format = <label-state> <label-mode>
+label-mode = "  %mode%  "
+label-mode-padding = 1
+label-mode-background = ${colors.foreground}
+label-mode-foreground = ${colors.background}
+label-mode-underline = ${colors.accent}
+label-focused = %name%
+label-focused-background = ${colors.foreground}
+label-focused-foreground = ${colors.background}
+label-focused-padding = 1
+label-focused-font = 2 
+label-focused-underline = ${colors.accent}
+label-unfocused = %name%
+label-unfocused-padding = 1
+label-visible = %name%
+label-visible-padding = 1
+label-visible-underline = ${colors.accent}
+label-urgent = %name%
+label-urgent-foreground = ${colors.accent}
+label-urgent-padding = 1
+
+
+[module/battery]
+type = internal/battery
+full-at = 100
+battery = BAT1
+adapter = ACAD
+poll-interval = 5
+time-format = %H:%M
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+label-charging =  %percentage%% (%time%)
+label-charging-underline = #ffff69
+label-discharging =  %percentage%% (%time%)
+label-discharging-underline = #ff6969
+label-full =  Full
+label-full-underline = #6969ff
+
+[module/pulseaudio]
+type=internal/pulseaudio
+use-ui-max = false
+interval = 1
+format-volume = %{A3:pavucontrol:}<ramp-volume> <label-volume>%{A}
+label-volume= %percentage:2%%
+label-muted =  
+ramp-volume-0 = 
+ramp-volume-1 = 
+
+[module/date]
+type = internal/date
+date = %a %d.%b.%Y
+date-alt = %A, %d %B %Y
+time = %H:%M
+time-alt = %H:%M:%S
+format = <label>
+label = %{T2}%time%%{T-} %date%
