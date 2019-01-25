@@ -191,6 +191,10 @@ bindsym $mod+r mode "resize"
 
 # Shivam's Config
 
+## Window decorations
+default_border pixel 1
+hide_edge_borders smart
+
 ## Custom keybinds
 bindsym $mod+Control+Left workspace prev
 bindsym $mod+Control+Right workspace next
