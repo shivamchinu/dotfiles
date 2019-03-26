@@ -9,5 +9,5 @@ done
 
 # Launch 'MyBar'
 export MONITOR=$(xrandr -q | grep primary | sed -e 's/\s.*$//g')
-polybar MyBar &
+polybar --config=$HOME/.config/polybar/config.ini MyBar &
 echo "Polybar launched..."
