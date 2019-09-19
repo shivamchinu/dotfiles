@@ -94,14 +94,14 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:"
-set $ws2 "2:"
-set $ws3 "3:"
-set $ws4 "4:"
-set $ws5 "5:"
-set $ws6 "6:"
-set $ws7 "7:"
-set $ws8 "8:"
+set $ws1 "1:"
+set $ws2 "2:"
+set $ws3 "3:"
+set $ws4 "4:"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7:"
+set $ws8 "8:"
 set $ws9 "9:"
 set $ws10 "10:"
 
@@ -200,6 +200,9 @@ hide_edge_borders smart
 bindsym $mod+Control+Left workspace prev
 bindsym $mod+Control+Right workspace next
 bindsym $mod+Shift+p exec --no-startup-id /home/shivam/.screenlayout/work_monitors.sh
+bindsym $mod+Shift+o exec --no-startup-id /home/shivam/.screenlayout/laptop_monitor.sh
+bindsym $mod+Prior move workspace to output up
+bindsym $mod+Next move workspace to output up
 
 ## Pulse Audio controls
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +1% #increase sound volume
@@ -247,8 +250,10 @@ client.background       #F8F8F2
 ## Window behaviour
 for_window [class="Blueman-manager" instance="blueman-manager"] floating enable
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
-
+for_window [class="Steam" title="Friends List"] floating enable
 ## Apps
+# Start the polkit-agent
+exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Start the polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Start network manager applet
