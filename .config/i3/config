@@ -103,7 +103,7 @@ set $ws6 "6:"
 set $ws7 "7:"
 set $ws8 "8:"
 set $ws9 "9:"
-set $ws10 "10:"
+set $ws10 "10:"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -251,6 +251,7 @@ client.background       #F8F8F2
 for_window [class="Blueman-manager" instance="blueman-manager"] floating enable
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
 for_window [class="Steam" title="Friends List"] floating enable
+for_window [class="SpeedCrunch" title="SpeedCrunch"] floating enable
 ## Apps
 # Start the polkit-agent
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

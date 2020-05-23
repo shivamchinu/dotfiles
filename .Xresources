@@ -1,6 +1,9 @@
 !! Cursor size
 Xcursor.size: 16
 
+!! DPI
+Xft.dpi: 96 
+
 !! Font cofig
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
@@ -10,72 +13,17 @@ Xft.antialias: 1
 Xft.rgba: rgb
 
 !! URxvt Configuration
-URxvt.font: xft:Fantasque Sans Mono:style=Regular:size=17, xft:Font\ Awesome\ 5\ Free:size=15:minspace=False
+URxvt.font: xft:Fantasque Sans Mono:style=Regular:size=14, xft:Font\ Awesome\ 5\ Free:size=15:minspace=False
 URxvt.scrollBar: false
 URxvt.letterSpace: 0
-!! Dracula Xresources palette
-!*.foreground: #F8F8F2
-!*.background: #282A36
-!*.color0:     #000000
-!*.color8:     #4D4D4D
-!*.color1:     #FF5555
-!*.color9:     #FF6E67
-!*.color2:     #50FA7B
-!*.color10:    #5AF78E
-!*.color3:     #F1FA8C
-!*.color11:    #F4F99D
-!*.color4:     #BD93F9
-!*.color12:    #CAA9FA
-!*.color5:     #FF79C6
-!*.color13:    #FF92D0
-!*.color6:     #8BE9FD
-!*.color14:    #9AEDFE
-!*.color7:     #BFBFBF
-!*.color15:    #E6E6E6
-
-!! Tango
-! special
-!*.foreground:   #babdb6
-!*.background:   #000000
-!*.cursorColor:  #babdb6
-!
-!! black
-!*.color0:       #2e3436
-!*.color8:       #555753
-!
-!! red
-!*.color1:       #cc0000
-!*.color9:       #ef2929
-!
-!! green
-!*.color2:       #4e9a06
-!*.color10:      #8ae234
-!
-!! yellow
-!*.color3:       #c4a000
-!*.color11:      #fce94f
-!
-!! blue
-!*.color4:       #3465a4
-!*.color12:      #729fcf
-!
-!! magenta
-!*.color5:       #75507b
-!*.color13:      #ad7fa8
-!
-!! cyan
-!*.color6:       #06989a
-!*.color14:      #34e2e2
-!
-!! white
-!*.color7:       #d3d7cf
-!*.color15:      #eeeeec
 
 !! Gruvbox
 ! hard contrast:
 *.background: #1d2021
-! medium *background: #282828
-! soft contrast: *background: #32302f
+! medium
+!*background: #282828
+! soft contrast
+!*background: #32302f
 *.foreground: #ebdbb2
 ! Black + DarkGrey
 *.color0:  #282828
@@ -101,3 +49,4 @@ URxvt.letterSpace: 0
 ! LightGrey + White
 *.color7:  #a89984
 *.color15: #ebdbb2
+
