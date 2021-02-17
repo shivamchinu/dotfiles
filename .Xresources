@@ -13,7 +13,7 @@ Xft.antialias: 1
 Xft.rgba: rgb
 
 !! URxvt Configuration
-URxvt.font: xft:Fantasque Sans Mono:style=Regular:size=14, xft:Font\ Awesome\ 5\ Free:size=15:minspace=False
+URxvt.font: xft:Fantasque Sans Mono:style=Regular:size=14, xft:Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular:size=15:minspace=False
 URxvt.scrollBar: false
 URxvt.letterSpace: 0
 

@@ -30,7 +30,8 @@ font pango:Noto Sans 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -201,6 +202,7 @@ bindsym $mod+Control+Left workspace prev
 bindsym $mod+Control+Right workspace next
 bindsym $mod+Shift+p exec --no-startup-id /home/shivam/.screenlayout/work_monitors.sh
 bindsym $mod+Shift+o exec --no-startup-id /home/shivam/.screenlayout/laptop_monitor.sh
+bindsym $mod+Shift+t exec --no-startup-id /home/shivam/.screenlayout/tv_only.sh
 bindsym $mod+Prior move workspace to output up
 bindsym $mod+Next move workspace to output up
 
@@ -252,12 +254,7 @@ for_window [class="Blueman-manager" instance="blueman-manager"] floating enable
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
 for_window [class="Steam" title="Friends List"] floating enable
 for_window [class="SpeedCrunch" title="SpeedCrunch"] floating enable
+for_window [instance="sun-awt-X11-XWindowPeer"] focus # For IntelliJ Idea menus which hide behind dialogs
 ## Apps
-# Start the polkit-agent
-exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Start the polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-# Start network manager applet
-exec_always --no-startup-id 'nm-applet'
-# Start blueman applet
-exec_always --no-startup-id 'blueman-applet'

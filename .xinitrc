@@ -1,4 +1,5 @@
 #!/bin/sh
+$HOME/.monicarc   #monitor calibration
 
 xrandr --dpi 96 &
 
@@ -36,5 +37,8 @@ fi
 
 ~/.fehbg &
 numlockx &
-udiskie --tray &
+nm-applet --indicator &
+blueman-applet &
+/usr/lib/polkit-kde-authentication-agent-1 &
+libinput-gestures-setup start &
 exec i3 
